@@ -1,0 +1,11 @@
+{
+    "name": "Game of Life.js",
+    "source": "src/index.html",
+    "scripts": {
+        "dev": "parcel --open",
+        "build": "parcel build"
+    },
+    "devDependencies": {
+        "parcel": "latest"
+    }
+}
