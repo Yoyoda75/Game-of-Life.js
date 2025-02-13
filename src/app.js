@@ -1,4 +1,5 @@
 // Setup
+import colors from "./colors.json";
 /** @type {HTMLCanvasElement} */
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
@@ -9,11 +10,11 @@ const cellSizeSlider = sidebar.querySelector("#cellSizeSlider");
 const cellSize = sidebar.querySelector("#value");
 cellSize.textContent = cellSizeSlider.value;
 
-canvas.width = 1200;
-canvas.height = 1000;
+canvas.width = 1400;
+canvas.height = 1200;
 
-const ALIVE = "#FFF";
-const DEAD = "#000";
+const ALIVE = colors["Dazzle Me"];
+const DEAD = colors["Bruised Plum"];
 
 class Effect {
     constructor(canvas) {
@@ -24,9 +25,6 @@ class Effect {
         this.isDragging = 0;
         this.toroidal = 0;
         this.init();
-
-        //this.debug = false;
-        //this.pause = false;
 
         this.canvas.addEventListener("mousedown", (e) => {
             this.isDragging ^= 1;
